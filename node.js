@@ -24,6 +24,7 @@ choices = ["rock", "paper", "scissors"];
 function computerChoice() {
   i = Math.floor(Math.random() * choices.length);
   computerAnswer = choices[i];
+  console.log(computerAnswer)
   return computerAnswer;
 }
 
@@ -60,6 +61,13 @@ function playerGuess() {
         console.log(`Yes! Paper covers rock! Choose again!`);
         computerChoice();
         playerGuess();
+      } else if(guess === computerAnswer){
+        console.log(`It's a tie! No points for anyone.`)
+        computerChoice()
+        playerGuess()
+      } else{
+        console.log(`Please choose rock, paper or scissors!!`)
+        playerGuess()
       }
     } else if (computerCount === 3) {
       console.log(`You Lose!`);
