@@ -24,7 +24,6 @@ choices = ["rock", "paper", "scissors"];
 function computerChoice() {
   i = Math.floor(Math.random() * choices.length);
   computerAnswer = choices[i];
-  console.log(computerAnswer);
   return computerAnswer;
 }
 
